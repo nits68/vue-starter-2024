@@ -103,7 +103,9 @@ module.exports = configure(function (/* ctx */) {
 
       // Quasar plugins
       plugins: ['Notify', 'Dialog', 'Loading', 'LocalStorage'],
-      cssAddon: true,
+
+      // https://quasar.dev/style/spacing#flex-addons
+      // cssAddon: true,
     },
 
     // animations: 'all', // --- includes all animations

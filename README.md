@@ -192,22 +192,26 @@ plugins: ['Notify', 'Dialog', 'Loading', 'LocalStorage'],
 >Ctrl-Shift-B, vagy<br>
 >npm run dev
 
-# 6. dotenv használata
+# 6. A dotenv használata (pl.: jelszó tárolására)
+## 6.1 Telepítés
 ```
-6.1 Telepítés:
 npm i -D dotenv
 ```
+## 6.2 Beállítás a quasar.config.js állományban
 ```
-6.2 Beállítás a quasar.config.js állományban:
 build {
    env: require('dotenv').config().parsed,
 }
 ```
+## 6.3 ".env" állomány létrehozása a project root-ban, változók megadása
 ```
-6.3 ".env" állomány létrehozása a project root-ban, pl.:
 BASE_URL=http://localhost:3000
 ```
+## 6.4 Változó(k) elérése forráskódból:
 ```
-6.4 Változó(k) elérése:
-  const api = axios.create({ baseURL: process.env.BASE_URL });
+  process.env.BASE_URL
+```
+## 6.5 ".gitignore" állomány bővítése, ha érzékeny adatok vannak a .env állományban
+```
+.env
 ```

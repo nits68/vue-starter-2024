@@ -177,6 +177,7 @@ devServer: {
 ```
 // Quasar plugins
 plugins: ['Notify', 'Dialog', 'Loading', 'LocalStorage'],
+cssAddon: true,
 ```
 
 ## 2.6 Vue.js devtools bővítmény telepítése (Edge és Chrome böngészőkbe) és bekapcsolása

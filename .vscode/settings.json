@@ -3,14 +3,27 @@
   "editor.guides.bracketPairs": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": [
-    "source.fixAll.eslint"
-  ],
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "vue"
-  ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  "editor.mouseWheelZoom": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
+  "files.autoSave": "afterDelay",
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.autofetchPeriod": 60,
+  "prettier.printWidth": 120,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.vscode": false,
+    "**/tsconfig.json": false,
+    "**/package-lock.json": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/*.js.map": true,
+    "**/*.npmrc": true
+  }
 }

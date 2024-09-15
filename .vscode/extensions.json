@@ -2,9 +2,13 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "editorconfig.editorconfig",
-    "vue.volar",
-    "wayou.vscode-todo-highlight"
+    "eamodio.gitlens",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "christian-kohler.npm-intellisense",
+    "codecoaching.quasar-docs",
+    "wemade.quasar-class-autocompletion",
+    "antfu.iconify"
   ],
   "unwantedRecommendations": [
     "octref.vetur",

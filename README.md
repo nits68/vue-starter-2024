@@ -136,14 +136,13 @@
 }
 ```
 
-> Nyomkövetés menete:
->
-> 1.  Indítsad el a fordítást a **Ctrl-Shift-B**-vel, vagy az "npm run dev" paranccsal
-> 2.  Zárjad be a megjelenő böngészőablakot (ha megjelenik)
-> 3.  Indítsad el az alkalmazást debug-módban az **F5**-el
-> 4.  Az új böngészőablak megnyitása után helyezz el a vizsgálni kívánt kódsorok elé töréspontokat (piros pontok)
-> 5.  Navigálj úgy az alkalmazásban, hogy a kódsorok végrehajtásra kerüljenek
-> 6.  Vizsgáld a változók tartalmát, figyeld/folytasd a programsorok végrehajtását (**F10**, **F11**, **F5**)
+>Nyomkövetés menete:
+>1.  Indítsad el a fordítást a **Ctrl-Shift-B**-vel, vagy az "npm run dev" paranccsal
+>2.  Zárjad be a megjelenő böngészőablakot (ha megjelenik)
+>3.  Indítsad el az alkalmazást debug-módban az **F5**-el
+>4.  Az új böngészőablak megnyitása után helyezz el a vizsgálni kívánt kódsorok elé töréspontokat (piros pontok)
+>5.  Navigálj úgy az alkalmazásban, hogy a kódsorok végrehajtásra kerüljenek
+>6.  Vizsgáld a változók tartalmát, figyeld/folytasd a programsorok végrehajtását (**F10**, **F11**, **F5**)
 
 ## 2.5 Quasar beállítása: quasar.config.ts
 
@@ -182,7 +181,7 @@ plugins: ['Notify', 'Dialog', 'Loading', 'LocalStorage'],
 ## 2.6 Vue.js devtools bővítmény telepítése (Edge és Chrome böngészőkbe) és bekapcsolása
 
 ![Devtools](images/vuejs_devtools.jpg 'Vue.js Devtools bővítmény')
-> Az automatikusan induló és az F5-el induló böngészőhöz is telepíteni kell
+>Az automatikusan induló és az F5-el induló böngészőhöz is telepíteni kell
 # 3. Forrásállományok formázása az új beállításokkal
 >npm run format
 
@@ -192,3 +191,23 @@ plugins: ['Notify', 'Dialog', 'Loading', 'LocalStorage'],
 # 5. Projekt futtatása
 >Ctrl-Shift-B, vagy<br>
 >npm run dev
+
+# 6. dotenv használata
+```
+6.1 Telepítés:
+npm i -D dotenv
+```
+```
+6.2 Beállítás a quasar.config.js állományban:
+build {
+   env: require('dotenv').config().parsed,
+}
+```
+```
+6.3 ".env" állomány létrehozása a project root-ban, pl.:
+BASE_URL=http://localhost:3000
+```
+```
+6.4 Változó(k) elérése:
+  const api = axios.create({ baseURL: process.env.BASE_URL });
+```
